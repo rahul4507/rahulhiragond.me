@@ -38,7 +38,7 @@ const Contact = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/Linkedin.png" alt="LinkedIn" className="w-8 h-8" />
+              <img src="/LinkedIn.png" alt="LinkedIn" className="w-8 h-8" />
             </a>
             <a
               href="https://x.com/RahulHiragond/"
