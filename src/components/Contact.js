@@ -84,7 +84,7 @@ const Contact = () => (
                 />
               </a>
               <a
-                href="https://www.geeksforgeeks.org"
+                href="https://www.geeksforgeeks.org/user/rahul8768/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
