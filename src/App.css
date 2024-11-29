@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.footer {
+  height: 100px; /* Ensures the footer is at the bottom */
+}
