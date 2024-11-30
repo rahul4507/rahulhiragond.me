@@ -1,45 +1,51 @@
 const Footer = () => {
+  const socialLinks = [
+    {
+      href: "https://www.linkedin.com/in/rahul-hiragond/",
+      label: "LinkedIn",
+      className: "hover:text-blue-400",
+    },
+    {
+      href: "https://github.com/rahul4507/",
+      label: "GitHub",
+      className: "hover:text-blue-400",
+    },
+    {
+      href: "https://x.com/RahulHiragond/",
+      label: "Twitter",
+      className: "hover:text-blue-400",
+    },
+    {
+      href: "https://rahulhiragond.medium.com/",
+      label: "Medium",
+      className: "hover:text-blue-400",
+    },
+  ];
+
   return (
     <footer className="bg-gray-800 text-white py-8">
       <div className="max-w-screen-lg mx-auto px-4">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+          {/* Social Links */}
           <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8">
-            <a
-              href="https://www.linkedin.com/in/rahul-hiragond/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/rahul4507/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://x.com/RahulHiragond/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://rahulhiragond.medium.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400"
-            >
-              Medium
-            </a>
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={link.className}
+                aria-label={`Visit ${link.label}`}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
-          <div className="text-center mt-4 lg:mt-0">
+
+          {/* Copyright Section */}
+          <div className="text-center">
             <p>
-              &copy; 2024{" "}
+              &copy; {new Date().getFullYear()}{" "}
               <a href="#home" className="hover:text-blue-400">
                 Rahul Hiragond
               </a>
