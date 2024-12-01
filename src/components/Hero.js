@@ -27,7 +27,7 @@ const Hero = () => (
 
     {/* Resume Download Button */}
     <a
-      href="/Resume1.pdf"
+      href="/resume.pdf"
       download
       aria-label="Download Rahul Hiragond's Resume"
       className="bg-blue-500 text-white px-6 py-2 rounded-lg shadow-lg hover:bg-blue-600 hover:scale-105 transition transform duration-300"
