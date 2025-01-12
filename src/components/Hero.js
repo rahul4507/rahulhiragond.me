@@ -3,15 +3,19 @@ import React from "react";
 const Hero = () => (
   <section
     id="home"
-    className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-blue-700 to-purple-800 text-white text-center px-4"
+    className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-700 to-purple-800 text-white text-center px-4"
   >
+    <div className="flex flex-col items-center justify-center min-h-screen  text-white text-center px-26 mt-20">
+
     <img
       src="/profile.jpg"
       alt="Rahul Hiragond"
-      className="rounded-full w-40 mb-6 border-4 border-white shadow-lg"
+      className="rounded-full w-40 mb-6 border-4 border-white shadow-lg sm:w-32 md:w-40 lg:w-40"
     />
-    <h1 className="text-5xl font-bold mb-4">Hi, I'm Rahul Hiragond</h1>
-    <p className="text-lg mb-6 max-w-xl">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+      Hi, I'm Rahul Hiragond
+    </h1>
+    <p className="text-base sm:text-lg mb-6 max-w-xl mx-auto">
       🚀 Software Engineer with expertise in scalable backend development and system design.
       Passionate about building robust systems using Python, Django, and modern technologies.
       Currently a Final Year B.Tech Student at MIT Academy of Engineering.
@@ -27,10 +31,10 @@ const Hero = () => (
         <span className="font-semibold">300+</span> Problems Solved
       </div>
     </div>
-    <div className="space-x-4">
+    <div className="flex flex-col sm:flex-row justify-center gap-4 space-y-4 sm:space-y-0 mb-12">
       <a
         href="#projects"
-        className="bg-blue-600 text-white border-2 border-white  px-8 py-4 rounded-lg shadow-xl hover:bg-white hover:text-blue-600 transition duration-300 transform hover:scale-105"
+        className="bg-blue-600 text-white border-2 border-white px-8 py-4 rounded-lg shadow-xl hover:bg-white hover:text-blue-600 transition duration-300 transform hover:scale-105"
       >
         View Projects
       </a>
@@ -41,12 +45,13 @@ const Hero = () => (
         Contact Me
       </a>
       <a
-        href="/resume.pdf"
+        href="/Rahul-Hiragond.pdf"
         className="bg-blue-600 text-white border-2 border-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition duration-300 transform hover:scale-105"
       >
         Download My Resume
       </a>
     </div>
+  </div>
   </section>
 );
 
