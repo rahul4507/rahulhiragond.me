@@ -1,21 +1,16 @@
+import React from 'react';
+
 const projectData = [
   {
-    title: "Result Analysis System",
-    description: "Platform for student assessment using Django and PostgreSQL.",
-    link: "#", // Replace with the project/demo link
+    title: "Natours - Tour Booking Platform",
+    description: "Full-stack tour booking platform built with Node.js, Express.js, and MongoDB. Features Stripe payment integration, JWT authentication, and automated SendGrid email notifications.",
+    link: "https://github.com/rahul4507/rule-engine-backend", // Placeholder - resume mentions GitHub and Live Link exist
   },
   {
-    title: "Inspire the Art",
-    description:
-      "Dynamic platform for artists to showcase and monetize their work.",
-    link: "#", // Replace with the project/demo link
-  },
-  {
-    title: "Microservice Architecture",
-    description:
-      "Developed modular solutions for log management and scalability.",
-    link: "#", // Replace with the project/demo link
-  },
+    title: "Rule Engine Platform",
+    description: "Full-stack platform for creating and managing business rules using Abstract Syntax Trees (AST). Built with Django, PostgreSQL backend and React.js frontend.",
+    link: "https://github.com/rahul4507/natours", // Placeholder - resume mentions GitHub link exists
+  }
 ];
 
 const Projects = () => (
