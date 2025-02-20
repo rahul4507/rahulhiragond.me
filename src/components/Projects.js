@@ -4,12 +4,12 @@ const projectData = [
   {
     title: "Natours - Tour Booking Platform",
     description: "Full-stack tour booking platform built with Node.js, Express.js, and MongoDB. Features Stripe payment integration, JWT authentication, and automated SendGrid email notifications.",
-    link: "https://github.com/rahul4507/rule-engine-backend", // Placeholder - resume mentions GitHub and Live Link exist
+    link: "https://github.com/rahul4507/natours", // Placeholder - resume mentions GitHub and Live Link exist
   },
   {
     title: "Rule Engine Platform",
     description: "Full-stack platform for creating and managing business rules using Abstract Syntax Trees (AST). Built with Django, PostgreSQL backend and React.js frontend.",
-    link: "https://github.com/rahul4507/natours", // Placeholder - resume mentions GitHub link exists
+    link: "https://github.com/rahul4507/rule-engine-backend", // Placeholder - resume mentions GitHub link exists
   }
 ];
 

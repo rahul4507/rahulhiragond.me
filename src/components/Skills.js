@@ -45,12 +45,12 @@ const skillData = [
   {
     category: "DevOps & Tools",
     skills: [
-      { name: "AWS (S3, SQS)", icon: Cloud },
+      { name: "AWS", icon: Cloud },
       { name: "Docker", icon: Code },
-      { name: "Git", icon: Code },
-      { name: "Flask", icon: Container },
-      { name: "C/C++", icon: FileCode },
-      { name: "REST APIs", icon: Settings },
+      { name: "Kubernetes", icon: Code },
+      { name: "GCP", icon: Container },
+      { name: "Jenkins", icon: FileCode },
+      { name: "Signoz", icon: Settings },
     ],
   },
 ];
