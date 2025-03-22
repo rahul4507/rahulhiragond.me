@@ -9,21 +9,21 @@ const Contact = () => {
     subject: "",
     message: "",
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError("");
-    
+
     try {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1500));
@@ -42,17 +42,17 @@ const Contact = () => {
     <section id="contact" className="py-20 px-6 md:px-12 bg-gradient-to-b from-secondary/50 to-background">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground" >Get In Touch</h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           <div className="space-y-8 opacity-0 animate-fade-in">
             <div>
               <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
               <p className="text-muted-foreground mb-6">
-                Have a project in mind or want to discuss potential collaboration? 
+                Have a project in mind or want to discuss potential collaboration?
                 Feel free to reach out. I'm always open to new opportunities and challenges.
               </p>
             </div>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="p-3 rounded-full bg-primary/10 mr-4">
@@ -60,47 +60,47 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <a 
-                    href="mailto:contact@rahulhiragond.com" 
+                  <a
+                    href="mailto:rahulhiragond04@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    contact@rahulhiragond.com
+                    rahulhiragond04@gmail.com
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="p-3 rounded-full bg-primary/10 mr-4">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-medium">Phone</h4>
-                  <a 
-                    href="tel:+917741976522" 
+                  <a
+                    href="tel:+917741976522"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     +91 774 197 6522
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="p-3 rounded-full bg-primary/10 mr-4">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
-                  <p className="text-muted-foreground">Mumbai, Maharashtra, India</p>
+                  <p className="text-muted-foreground">Pune, Maharashtra, India</p>
                 </div>
               </div>
             </div>
-            
+
             <div className="pt-4">
               <h4 className="font-medium mb-3">Follow Me</h4>
               <div className="flex space-x-4">
-                <a 
-                  href="https://github.com/rahul4507" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/rahul4507"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-foreground text-background hover:bg-primary transition-colors"
                   aria-label="GitHub"
@@ -109,9 +109,9 @@ const Contact = () => {
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
                 </a>
-                <a 
-                  href="https://linkedin.com/in/rahul-hiragond" 
-                  target="_blank" 
+                <a
+                  href="https://linkedin.com/in/rahul-hiragond"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-foreground text-background hover:bg-primary transition-colors"
                   aria-label="LinkedIn"
@@ -122,9 +122,9 @@ const Contact = () => {
                     <circle cx="4" cy="4" r="2"></circle>
                   </svg>
                 </a>
-                <a 
-                  href="https://twitter.com/rahulhiragond" 
-                  target="_blank" 
+                <a
+                  href="https://twitter.com/rahulhiragond"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-foreground text-background hover:bg-primary transition-colors"
                   aria-label="Twitter"
@@ -136,7 +136,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="opacity-0 animate-fade-in animate-delay-300">
             <div className="bg-card rounded-xl p-6 shadow-md">
               {submitted ? (
@@ -171,10 +171,10 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
-                      placeholder="John Doe"
+                      placeholder="John Mauli"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
                       Your Email
@@ -187,10 +187,10 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
-                      placeholder="john@example.com"
+                      placeholder="abc@example.com"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium mb-2">
                       Subject
@@ -206,7 +206,7 @@ const Contact = () => {
                       placeholder="Project Inquiry"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
                       Message
@@ -222,9 +222,9 @@ const Contact = () => {
                       placeholder="Your message here..."
                     ></textarea>
                   </div>
-                  
+
                   {error && <p className="text-red-500 text-sm">{error}</p>}
-                  
+
                   <button
                     type="submit"
                     disabled={isSubmitting}

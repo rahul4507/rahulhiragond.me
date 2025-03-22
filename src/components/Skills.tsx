@@ -2,21 +2,21 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { 
-  Code, 
-  FileCode, 
-  Palette, 
-  Blocks, 
-  Brain, 
-  Server, 
-  Database, 
-  Terminal, 
-  PenTool, 
-  GitBranch, 
-  Layers, 
-  Box, 
-  Languages, 
-  BadgeCheck, 
+import {
+  Code,
+  FileCode,
+  Palette,
+  Blocks,
+  Brain,
+  Server,
+  Database,
+  Terminal,
+  PenTool,
+  GitBranch,
+  Layers,
+  Box,
+  Languages,
+  BadgeCheck,
   LayoutGrid,
   Workflow,
   Clock,
@@ -29,7 +29,7 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("technical");
   const [animateSkills, setAnimateSkills] = useState(false);
   const skillsRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -42,11 +42,11 @@ const Skills = () => {
         threshold: 0.2,
       }
     );
-    
+
     if (skillsRef.current) {
       observer.observe(skillsRef.current);
     }
-    
+
     return () => {
       if (skillsRef.current) {
         observer.unobserve(skillsRef.current);
@@ -57,13 +57,10 @@ const Skills = () => {
   const technicalSkills = [
     { name: "Django", icon: <Blocks className="h-6 w-6" /> },
     { name: "Python", icon: <Blocks className="h-6 w-6" /> },
-    { name: "JavaScript", icon: <FileCode className="h-6 w-6" /> },
-    { name: "TypeScript", icon: <Code className="h-6 w-6" /> },
-    { name: "Tailwind CSS", icon: <Palette className="h-6 w-6" /> },
     { name: "Node.js", icon: <Server className="h-6 w-6" /> },
     { name: "Express", icon: <Server className="h-6 w-6" /> },
     { name: "MongoDB", icon: <Database className="h-6 w-6" /> },
-    { name: "PostGres", icon: <Database className="h-6 w-6" /> },
+    { name: "PostgreSQL", icon: <Database className="h-6 w-6" /> },
     { name: "Git", icon: <GitBranch className="h-6 w-6" /> },
     { name: "REST API", icon: <Server className="h-6 w-6" /> },
     { name: "AWS", icon: <Server className="h-6 w-6" /> },
@@ -92,7 +89,7 @@ const Skills = () => {
         <TooltipProvider key={index}>
           <Tooltip>
             <TooltipTrigger asChild>
-              <div 
+              <div
                 className="flex flex-col items-center justify-center p-4 rounded-xl bg-card dark:bg-gray-800/50 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
@@ -117,7 +114,7 @@ const Skills = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
           My Skills
         </h2>
-        
+
         <Tabs defaultValue="technical" value={activeTab} onValueChange={setActiveTab} className="w-full">
           <div className="flex justify-center mb-8">
             <TabsList className="bg-secondary dark:bg-gray-800">
@@ -135,10 +132,10 @@ const Skills = () => {
               </TabsTrigger>
             </TabsList>
           </div>
-          
+
           <div className="space-y-8">
-            <TabsContent 
-              value="technical" 
+            <TabsContent
+              value="technical"
               className="opacity-0 animate-fade-in mt-0"
               style={{ animationPlayState: activeTab === "technical" ? "running" : "paused" }}
             >
@@ -148,9 +145,9 @@ const Skills = () => {
                 {renderSkillGrid(technicalSkills)}
               </div>
             </TabsContent>
-            
-            <TabsContent 
-              value="design" 
+
+            <TabsContent
+              value="design"
               className="opacity-0 animate-fade-in mt-0"
               style={{ animationPlayState: activeTab === "design" ? "running" : "paused" }}
             >
@@ -160,9 +157,9 @@ const Skills = () => {
                 {renderSkillGrid(designSkills)}
               </div>
             </TabsContent>
-            
-            <TabsContent 
-              value="soft" 
+
+            <TabsContent
+              value="soft"
               className="opacity-0 animate-fade-in mt-0"
               style={{ animationPlayState: activeTab === "soft" ? "running" : "paused" }}
             >

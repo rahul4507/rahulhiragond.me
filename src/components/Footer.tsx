@@ -1,5 +1,4 @@
 
-import React from "react";
 import { ArrowUp } from "lucide-react";
 
 const Footer = () => {
@@ -16,9 +15,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold text-foreground mb-2">Rahul Hiragond</h3>
-            <p className="text-muted-foreground">Frontend Developer & UI/UX Designer</p>
+            <p className="text-muted-foreground">Backend Developer & System Designer</p>
           </div>
-          
+
           <div className="flex flex-col items-center md:items-end">
             <button
               onClick={scrollToTop}
@@ -27,13 +26,13 @@ const Footer = () => {
             >
               <ArrowUp className="h-5 w-5" />
             </button>
-            
+
             <p className="text-muted-foreground text-sm">
               © {new Date().getFullYear()} Rahul Hiragond. All rights reserved.
             </p>
           </div>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t border-border">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -46,42 +45,42 @@ const Footer = () => {
                 <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
               </div>
             </div>
-            
+
             <div>
               <h4 className="font-medium mb-4">Connect</h4>
               <div className="flex flex-col space-y-2">
-                <a 
-                  href="https://github.com/rahul4507" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://github.com/rahul4507"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   GitHub
                 </a>
-                <a 
-                  href="https://linkedin.com/in/rahul-hiragond" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://linkedin.com/in/rahul-hiragond"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   LinkedIn
                 </a>
-                <a 
-                  href="https://twitter.com/rahulhiragond" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://twitter.com/rahulhiragond"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Twitter
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h4 className="font-medium mb-4">Get in Touch</h4>
               <div className="flex flex-col space-y-2">
-                <a href="mailto:contact@rahulhiragond.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  contact@rahulhiragond.com
+                <a href="mailto:rahulhiragond04@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                  rahulhiragond04@gmail.com
                 </a>
                 <a href="tel:+917741976522" className="text-muted-foreground hover:text-primary transition-colors">
                   +91 774 197 6522
