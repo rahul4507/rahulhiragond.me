@@ -1,6 +1,18 @@
-
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { createClient } from "@supabase/supabase-js";
+import emailjs from "emailjs-com";
+
+// Initialize Supabase Client using environment variables
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+// EmailJS configuration from environment variables
+const emailServiceID = import.meta.env.VITE_PUBLIC_EMAILJS_SERVICE_ID;
+const emailTemplateID = import.meta.env.VITE_PUBLIC_EMAILJS_TEMPLATE_ID;
+const emailUserID = import.meta.env.VITE_PUBLIC_EMAILJS_USER_ID;
+const toEmail = import.meta.env.VITE_PUBLIC_EMAIL;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,8 +37,30 @@ const Contact = () => {
     setError("");
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Save the message to Supabase
+      const { error: dbError } = await supabase.from("messages").insert([
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+      ]);
+      if (dbError) {
+        throw dbError;
+      }
+
+      // Send Email using EmailJS
+      const emailParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: toEmail,
+      };
+
+      await emailjs.send(emailServiceID, emailTemplateID, emailParams, emailUserID);
+
       console.log("Form submitted:", formData);
       setSubmitted(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
@@ -41,7 +75,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 px-6 md:px-12 bg-gradient-to-b from-secondary/50 to-background">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground" >Get In Touch</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">Get In Touch</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           <div className="space-y-8 opacity-0 animate-fade-in">
