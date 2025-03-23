@@ -108,7 +108,7 @@ const Projects = () => {
       description: "A movie database application with search, filters, and detailed movie information.",
       image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2525&auto=format&fit=crop",
       tags: ["React", "Django", "TMDB API", "CSS3", "Context API"],
-      github: "https://github.com/rahul4507/movie-database",
+      github: "https://github.com/rahul4507?tab=repositories",
       demo: "https://movie-database-app.vercel.app/",
       category: "mobile",
     },
